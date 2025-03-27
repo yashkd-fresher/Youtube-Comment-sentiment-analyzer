@@ -1,0 +1,8 @@
+streamlit
+nltk
+pandas
+textblob
+matplotlib
+seaborn
+wordcloud
+google-api-python-client
