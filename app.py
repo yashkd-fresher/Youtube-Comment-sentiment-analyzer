@@ -197,13 +197,8 @@ def get_youtube_comments(video_id, max_results=500):
     """
     Fetch YouTube comments using pagination.
     """
-    API_KEY = (
-        os.getenv('YOUTUBE_API_KEY') or  # Environment variable
-        st.secrets.get('YOUTUBE_API_KEY') or  # Streamlit secrets
-        st.sidebar.text_input('Enter YouTube API Key', type='password')  # User input
-    )
-    if not API_KEY:
-        raise ValueError("YouTube API key is not set. Please check your .env file.")
+    API_KEY = os.getenv('YOUTUBE_API_KEY')
+    
     youtube = build('youtube', 'v3', developerKey=API_KEY)
     
     comments = []
