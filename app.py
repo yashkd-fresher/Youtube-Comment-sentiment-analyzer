@@ -193,7 +193,7 @@ def get_multilingual_sentiment(text, language):
         st.warning(f"Sentiment analysis failed: {e}")
         return "Neutral"
 
-def get_youtube_comments(video_id, max_results=500):
+def get_youtube_comments(video_id, max_results=100):
     """
     Fetch YouTube comments using pagination.
     """
